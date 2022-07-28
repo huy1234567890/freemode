@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+      <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+      <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+      <PlatformTarget>x64</PlatformTarget>
+      <StartupObject></StartupObject>
+      <BaseOutputPath>D:\RAGEMP 1.1\server-files\dotnet\resources\freemode</BaseOutputPath>
+      <BaseIntermediateOutputPath></BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Bootstrapper">
+      <HintPath>..\..\..\dotnet\runtime\Bootstrapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
